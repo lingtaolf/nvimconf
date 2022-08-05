@@ -9,7 +9,9 @@
 "========================
 set number
 set encoding=utf-8
-" set relativenumber
+"This is esay to know how many 
+"lines you below current lines
+set relativenumber
 set expandtab
 set tabstop=4
 set shiftwidth=4
@@ -33,6 +35,12 @@ endif
 " =======================
 
 call plug#begin('~/.config/nvim/plugged')
+" any fold
+  Plug 'pseewald/vim-anyfold'
+
+" vim terminal
+  Plug 'skywind3000/vim-terminal-help'
+
 " enhance editor
   Plug 'tomtom/tcomment_vim'
 
@@ -238,4 +246,9 @@ let g:airline_powerline_fonts = 1
 set guifont=Powerline_Consolas:h14:cANSI
 set t_Co=256
 "set fillchars+=stl:\ ,stlnc:\
-
+"
+"---------------- Any fold config----------
+filetype plugin indent on " required
+syntax on                 " required
+autocmd Filetype * AnyFoldActivate               " activate for all filetypes
+set foldlevel=99 " Open all folds
