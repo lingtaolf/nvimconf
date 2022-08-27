@@ -47,9 +47,6 @@ call plug#begin('~/.config/nvim/plugged')
 " git
   Plug 'tpope/vim-fugitive'
 
-" terminal
-  Plug 'skywind3000/vim-terminal-help'
-
 " Theme & highlight
   Plug 'cateduo/vsdark.nvim'
   Plug 'jackguo380/vim-lsp-cxx-highlight'
@@ -88,7 +85,7 @@ nmap <LEADER>cu g<c
 vmap <LEADER>cu g<
 
 " ==== Yggdroot/LeaderF ====
-let g:Lf_WindowPosition='right'
+let g:Lf_WindowPosition='popup'
 let g:Lf_PreviewInPopup=1
 let g:Lf_CommandMap = {
 \   '<C-p>': ['<C-k>'],
@@ -243,7 +240,7 @@ let g:airline_symbols.branch = '⎇'
 let g:airline#extensions#tabline#enabled = 1
 
 let g:airline_theme='bubblegum'
-let g:airline_section_b='%{strftime("%c")}'
+"let g:airline_section_b='%{strftime("%c")}'
 let g:airline_sectiony='BN: %{bufnr("%)}'
 "---------------alrLine Config--------------
 if !exists('g:airline_symbols')
