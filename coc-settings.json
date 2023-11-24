@@ -1,34 +1,36 @@
 {
-  "suggest.labelMaxLength": 60,
-  "suggest.completionItemKindLabels": {
-    "class": "\uf0e8",
-    "color": "\ue22b"
-  },
-  "cmake.formatter": "cmake-format",
-  "languageserver": {
-    "ccls": {
-      "command": "ccls",
-      "filetypes": [ "c", "cc", "cpp", "c++", "objc", "objcpp" ],
-      "rootPatterns": [ "compile_commands.json", ".git/", ".hg/", ".vscode", ".vim/" ],
-      "initializationOptions": {
-        "highlight": {"lsRanges": true},
-        "cache": {
-          "directory": "/tmp/ccls"
-        },
-        "clang": {
-          "resourceDir": "/usr/bin"
-        },
-        "completion": {
-          "detailedLable": true,
-          "placeholder": true
-        },
-        "index": {
-          "onChange": false,
-          "initialNoLinkage": true,
-          "threads": 2
-        },
-        "compilationDatabaseDirectory": "build/"
-      }
-    }
-  }
+    "suggest.labelMaxLength": 60,
+    "suggest.completionItemKindLabels": {
+        "class": "\uf0e8",
+        "color": "\ue22b"
+    },
+    "cmake.formatter": "cmake-format",
+    "languageserver": {
+        "ccls": {
+            "command": "ccls",
+            "filetypes": [
+                "c",
+                "cpp",
+                "objc",
+                "objcpp"
+            ],
+            "rootPatterns": [
+                "compile_commands.json"
+            ],
+            "trace.server": "verbose",
+            "initializationOptions": {
+                "cacheDirectory": "/tmp/ccls"
+            }
+        }
+    },
+    "clangd.path": "~/.config/coc/extensions/coc-clangd-data/install/16.0.2/clangd_16.0.2/bin/clangd",
+
+    "java.enabled": true,
+    "java.configuration.runtimes": [
+        {
+            "name": "JavaSE-11",
+            "path": "/root/src/jdk",
+            "default": true
+        }
+    ]
 }

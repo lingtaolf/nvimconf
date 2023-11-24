@@ -48,8 +48,11 @@ call plug#begin('~/.config/nvim/plugged')
   Plug 'tpope/vim-fugitive'
 
 " Theme & highlight
-  Plug 'cateduo/vsdark.nvim'
+  "Plug 'cateduo/vsdark.nvim'
   Plug 'jackguo380/vim-lsp-cxx-highlight'
+"  Plug 'folke/tokyonight.nvim'
+  Plug 'shaunsingh/nord.nvim'
+
 
 " file explorer
   Plug 'preservim/nerdtree'
@@ -69,6 +72,10 @@ call plug#begin('~/.config/nvim/plugged')
   "statusline
   Plug 'bling/vim-airline'
   Plug 'vim-airline/vim-airline-themes'
+
+  "Icons
+  Plug 'ryanoasis/vim-devicons'
+
 
 call plug#end()
 
@@ -105,8 +112,8 @@ nnoremap <LEADER>e :NERDTreeToggle<CR>
 
 " ==== cateduo/vsdark.nvim ====
 set termguicolors
-let g:vsdark_style = "dark"
-colorscheme vsdark
+"let g:vsdark_style = "dark"
+"colorscheme vsdark
 
 " ==== neoclide/coc.nvim ====
 
@@ -261,3 +268,20 @@ filetype plugin indent on " required
 syntax on                 " required
 autocmd Filetype * AnyFoldActivate               " activate for all filetypes
 set foldlevel=99 " Open all folds
+
+"colorscheme tokyonight
+
+" There are also colorschemes for the different styles.
+"colorscheme tokyonight-night
+"colorscheme tokyonight-storm
+"colorscheme tokyonight-day
+"let g:lightline = {'colorscheme': 'tokyonight'}
+
+colorscheme nord 
+let g:nord_contrast = v:true
+let g:nord_borders = v:false
+let g:nord_disable_background = v:false
+let g:nord_italic = v:false
+let g:nord_uniform_diff_background = v:true
+let g:nord_bold = v:false
+
